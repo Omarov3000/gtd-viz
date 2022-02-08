@@ -1,0 +1,267 @@
+.globe {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .globe {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 2rem;
+    height: 640px;
+  }
+  .globe > h2 {
+    margin-bottom: auto;
+    padding-left: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.globe-header {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .globe-header {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+.back-to-globe {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.back-to-globe > .iconify {
+  width: 32px;
+  transition: transform 200ms ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .back-to-globe > .iconify {
+    margin-left: 1.5rem;
+  }
+}
+
+.back-to-globe:hover > .iconify {
+  transform: translateX(-12%);
+}
+
+.globe-attacks-info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.globe-attacks-info-i {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.selected-country-label {
+  font-size: 1.5rem;
+}
+
+.counters-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.counters-panel > h3 {
+  margin: 0;
+}
+
+.plots-panel > h3 {
+  margin: 0;
+  padding-left: 0.75rem;
+}
+
+.plots-panel {
+  padding: 1rem;
+}
+
+.selected-country {
+  color: #cc3535;
+}
+
+.latest-info {
+  color: #da8181;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.2rem;
+}
+
+.zoom-info {
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
+  color: #da8181;
+  z-index: 100;
+  transition: opacity 250ms ease-in-out;
+}
+
+.core:hover .zoom-info {
+  opacity: 1;
+}
+
+.c-o {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  /* set in js */
+
+  background-color: #2a0505;
+}
+
+.c-o::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  width: 97%;
+  height: 97%;
+
+  background-color: #180000;
+}
+
+.c-m {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  width: 65%;
+  height: 65%;
+
+  background-color: #200202;
+}
+
+@media screen and (min-height: 1080px) {
+  .c-m {
+    width: 75%;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-m {
+    width: 110vw;
+    height: 110vw;
+    transform: translate(-50%, -55%);
+  }
+}
+
+.c-i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  width: 70%;
+  height: 70%;
+
+  background-color: #180000;
+}
+
+@media screen and (min-height: 1080px) {
+  .c-i {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-i {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.core {
+  width: 100%;
+  height: 100%;
+}
+
+.globe-charts {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+}
+
+.globe-charts-i {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.line-card {
+  width: 19rem;
+  height: 17rem;
+  background-color: #611d1d;
+  border-radius: 1rem;
+}
+
+.timeline-o {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-52%);
+  bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline-o {
+    bottom: 4rem;
+  }
+}
+
+.timeline {
+  display: flex;
+  width: 43vw;
+  z-index: 100;
+}
+
+@media screen and (min-height: 1080px) {
+  .timeline {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
+    width: 100vw;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+
+.timeline .icon-btn {
+  margin-right: 0.5rem;
+}

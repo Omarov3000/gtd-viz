@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  background-color: #180000;
+  color: #fff;
+}
+
+body,
+pre {
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+text {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h2 {
+  color: #cc3535;
+  font-size: 46px;
+}
+
+.app {
+  position: relative;
+  width: 100vw;
+}
+
+.app.no-overflow {
+  overflow: hidden;
+}
